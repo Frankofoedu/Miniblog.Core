@@ -1,4 +1,4 @@
-﻿@inject IOptionsSnapshot<BlogSettings> settings
+@inject IOptionsSnapshot<BlogSettings> settings
 @inject WebManifest manifest
 @{
     var host = $"{Context.Request.Scheme}://{Context.Request.Host}";
@@ -38,6 +38,15 @@
 
     <meta name="application-name" content="@ViewData[Constants.Title]" />
     <meta name="msapplication-TileColor" content="#ffffff" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJPHXFS8HG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-RJPHXFS8HG');
+    </script>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
 
